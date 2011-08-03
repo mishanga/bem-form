@@ -1,0 +1,18 @@
+block b-input {
+
+    js: true,
+
+    tag: 'input',
+
+    attrs: {
+        var id = 'input' + Math.random().toString().substring(2,10),
+            a = {
+                id: this.ctx.id = id,
+                type: this.ctx.type || 'text',
+                name: this.ctx.name || id,
+                value: this.ctx.value || ''
+            };
+        return a;
+    }
+
+}

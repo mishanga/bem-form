@@ -10,9 +10,14 @@
     ],
     content: {
         block: 'b-form',
-        content: {
-            tag: 'h1',
-            content: 'BEM Form'
-        }
+        content: [
+            {
+                tag: 'h1',
+                content: 'BEM Form'
+            },
+            {
+                block: 'b-input'
+            }
+        ]
     }
 })
