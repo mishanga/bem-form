@@ -16,6 +16,7 @@ BEM_CREATE=bem create block \
 		$(*F)
 
 %.html: %.bemhtml.js %.css %.js %.ie.css
+	rm -rf $@
 	$(call BEM_CREATE,bem-bl/blocks-desktop/i-bem/bem/techs/html.js)
 
 %.bemhtml.js: %.deps.js
