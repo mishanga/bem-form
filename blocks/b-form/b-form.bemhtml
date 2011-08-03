@@ -1,0 +1,16 @@
+block b-form {
+
+    js: true,
+
+    tag: 'form',
+
+    attrs: {
+        var a = {
+                id: this.ctx.id || 'form' + Math.random().toString().substring(2,10),
+                action: this.ctx.action || '',
+                method: this.ctx.method || 'GET'
+            };
+        return a;
+    }
+
+}
