@@ -1,4 +1,5 @@
 bem-bl
+jz-forms
 pages/*/*.css*
 pages/*/*.js*
 !*.bemjson.js

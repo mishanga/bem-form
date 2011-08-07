@@ -1,4 +1,4 @@
-all:: bem-bl
+all:: bem-bl jz-forms
 all:: $(patsubst %.bemjson.js,%.html,$(wildcard pages/*/*.bemjson.js))
 
 BEM_BUILD=bem build \
@@ -41,7 +41,7 @@ BEM_CREATE=bem create block \
 	$(call BEM_BUILD,js)
 
 
-DO_GIT=echo -- git $1 $2; \
+DO_GIT=@echo -- git $1 $2; \
 	if [ -d $2 ]; \
 		then \
 			cd $2 && git pull origin master; \
@@ -51,5 +51,11 @@ DO_GIT=echo -- git $1 $2; \
 
 bem-bl:
 	$(call DO_GIT,git://github.com/toivonen/bem-bl.git,$@)
+
+
+DO_SVN=@echo -- svn $1 $2; svn co $1 $2;
+
+jz-forms:
+	$(call DO_SVN,http://jz-forms.googlecode.com/svn/trunk/,$@)
 
 .PHONY: all
