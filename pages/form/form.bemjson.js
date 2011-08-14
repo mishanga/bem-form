@@ -11,6 +11,7 @@
     content: {
         block: 'b-form',
         mix: [{ block: 'i-jz-forms' }],
+        cls: 'jz',
         content: [
             {
                 tag: 'h1',
