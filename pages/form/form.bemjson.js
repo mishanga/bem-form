@@ -10,6 +10,7 @@
     ],
     content: {
         block: 'b-form',
+        mix: [{ block: 'i-jz-forms' }],
         content: [
             {
                 tag: 'h1',

@@ -1,9 +1,10 @@
-all:: bem-bl jz-forms
+all:: bem-bl bem-jz-forms
 all:: $(patsubst %.bemjson.js,%.html,$(wildcard pages/*/*.bemjson.js))
 
 BEM_BUILD=bem build \
 	-l bem-bl/blocks-common/ \
 	-l bem-bl/blocks-desktop/ \
+	-l bem-jz-forms/blocks/ \
 	-l blocks/ \
 	-d $< \
 	-t $1 \
@@ -52,10 +53,8 @@ DO_GIT=@echo -- git $1 $2; \
 bem-bl:
 	$(call DO_GIT,git://github.com/toivonen/bem-bl.git,$@)
 
-
-DO_SVN=@echo -- svn $1 $2; svn co $1 $2;
-
-jz-forms:
-	$(call DO_SVN,http://jz-forms.googlecode.com/svn/trunk/,$@)
+bem-jz-forms:
+	$(call DO_GIT,git://github.com/mishanga/bem-jz-forms.git,$@)
+	cd bem-jz-forms && make
 
 .PHONY: all
