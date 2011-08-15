@@ -18,7 +18,8 @@
                 content: 'BEM Form'
             },
             {
-                block: 'b-input'
+                block: 'b-input',
+                cls: 'jz'
             }
         ]
     }
