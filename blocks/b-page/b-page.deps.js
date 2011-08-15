@@ -3,10 +3,9 @@
         {
             block: 'i-bem',
             elem: 'dom',
-            mods: {'init': 'auto'}
+            mods: { 'init': 'auto' }
         },
-        {
-            block: 'i-jz-forms'
-        }
+        { block: 'i-jz-forms' },
+        { block: 'b-form-widget' }
     ]
 })

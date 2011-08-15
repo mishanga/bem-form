@@ -1,0 +1,15 @@
+.b-form.widget
+{
+}
+
+.b-form-widget__label
+{
+    width: 8em;
+
+    float: left;
+}
+
+.b-form-widget__field
+{
+    margin-left: 9em;
+}

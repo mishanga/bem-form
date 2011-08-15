@@ -18,8 +18,27 @@
                 content: 'BEM Form'
             },
             {
-                block: 'b-input',
-                cls: 'jz'
+                block: 'b-form-widget',
+                cls: 'jz-widget',
+                content: [
+                    {
+                        elem: 'label',
+                        content: {
+                            tag: 'label',
+                            content: 'text field'
+                        }
+                    },
+                    {
+                        elem: 'field',
+                        content: {
+                            tag: 'span',
+                            content: {
+                                block: 'b-input',
+                                cls: 'jz'
+                            }
+                        }
+                    }
+                ]
             }
         ]
     }

@@ -1,0 +1,9 @@
+block b-form-widget {
+
+    tag: 'dl'
+
+    elem label, tag: 'dt'
+
+    elem field, tag: 'dd'
+
+}
