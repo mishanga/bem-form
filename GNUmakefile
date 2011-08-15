@@ -47,7 +47,7 @@ DO_GIT=@echo -- git $1 $2; \
 		then \
 			cd $2 && git pull origin master; \
 		else \
-			git clone $1.git $2; \
+			git clone $1 $2; \
 	fi
 
 bem-bl:
