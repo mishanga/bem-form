@@ -34,6 +34,18 @@
                         }
                     }
                 ]
+            },
+            {
+                block: 'b-form-widget',
+                content: {
+                    elem: 'button',
+                    content: {
+                        block: 'b-button',
+                        value: 'Сохранить',
+                        jz: true
+                    }
+
+                }
             }
         ]
     }

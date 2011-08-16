@@ -1,0 +1,30 @@
+.b-input
+{
+    display: block;
+}
+
+.b-input__box
+{
+    display: block;
+
+    border: 1px solid #ccc;
+}
+
+.b-input__input
+{
+    width: 100%;
+
+    border: none;
+    background: #fff;
+}
+
+.b-input__input:focus
+{
+    outline: none;
+}
+
+
+.jz-focused .b-input__box
+{
+    border: 1px solid blue;
+}

@@ -1,5 +1,6 @@
-.b-form.widget
+.b-form-widget
 {
+    width: 25em;
 }
 
 .b-form-widget__label
@@ -10,6 +11,11 @@
 }
 
 .b-form-widget__field
+{
+    margin-left: 9em;
+}
+
+.b-form-widget__button
 {
     margin-left: 9em;
 }

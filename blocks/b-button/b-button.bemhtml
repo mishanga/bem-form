@@ -1,0 +1,29 @@
+block b-button {
+
+    js: true,
+
+    tag: 'span',
+
+    content: {
+
+        var a = { type: this.ctx.type || 'submit' };
+
+        this.ctx.id && (a.id = this.ctx.id);
+        this.ctx.name && (a.name = this.ctx.name);
+        this.ctx.value && (a.value = this.ctx.value);
+
+        if(this.ctx.jz) {
+            typeof this.ctx.jz == 'object' || (this.ctx.jz = {});
+            this.ctx.jz.container || (this.ctx.jz.container = '.b-button');
+            a.onclick = 'return ' + JSON.stringify({ jz: this.ctx.jz });
+        }
+
+        return {
+            elem: 'button',
+            tag: 'input',
+            attrs: a,
+            cls: this.ctx.jz ? 'jz' : ''
+        }
+    }
+
+}

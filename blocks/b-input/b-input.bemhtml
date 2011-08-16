@@ -6,19 +6,30 @@ block b-input {
 
     content: {
 
-        elem: 'box',
-        tag: 'span',
+        var id = 'input' + Math.random().toString().substring(2,10),
+            a = {
+                name: this.ctx.name || id,
+                id: this.ctx.id || this.ctx.name || id };
 
-        content: {
-            elem: 'input',
-            tag: 'input',
-            attrs: {
-                type: this.ctx.type || 'text',
-                name: this.ctx.name || '',
-                value: this.ctx.value || '',
-                onclick: this.ctx.jz ? 'return ' + JSON.stringify({ jz: this.ctx.jz }) : ''
-            },
-            cls: this.ctx.jz ? 'jz' : ''
+        this.ctx.type && (a.type = this.ctx.type);
+        this.ctx.value && (a.value = this.ctx.value);
+
+        if(this.ctx.jz) {
+            typeof this.ctx.jz == 'object' || (this.ctx.jz = {});
+            this.ctx.jz.container || (this.ctx.jz.container = '.b-input');
+            a.onclick = 'return ' + JSON.stringify({ jz: this.ctx.jz });
+        }
+
+        return {
+            elem: 'box',
+            tag: 'span',
+
+            content: {
+                elem: 'input',
+                tag: 'input',
+                attrs: a,
+                cls: this.ctx.jz ? 'jz' : ''
+            }
         }
 
     }
