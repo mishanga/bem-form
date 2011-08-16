@@ -9,8 +9,7 @@
         { elem: 'js', url: 'form.js' }
     ],
     content: {
-        block: 'b-form',
-        mix: [{ block: 'i-jz-forms' }],
+        block: 'i-jz-form',
         cls: 'jz',
         content: [
             {
@@ -19,7 +18,6 @@
             },
             {
                 block: 'b-form-widget',
-                cls: 'jz-widget',
                 content: [
                     {
                         elem: 'label',
@@ -31,11 +29,8 @@
                     {
                         elem: 'field',
                         content: {
-                            tag: 'span',
-                            content: {
-                                block: 'b-input',
-                                cls: 'jz'
-                            }
+                            block: 'b-input',
+                            jz: { container: '.b-form-widget' }
                         }
                     }
                 ]

@@ -2,17 +2,25 @@ block b-input {
 
     js: true,
 
-    tag: 'input',
+    tag: 'span',
 
-    attrs: {
-        var id = 'input' + Math.random().toString().substring(2,10),
-            a = {
-                id: this.ctx.id = id,
+    content: {
+
+        elem: 'box',
+        tag: 'span',
+
+        content: {
+            elem: 'input',
+            tag: 'input',
+            attrs: {
                 type: this.ctx.type || 'text',
-                name: this.ctx.name || id,
-                value: this.ctx.value || ''
-            };
-        return a;
+                name: this.ctx.name || '',
+                value: this.ctx.value || '',
+                onclick: this.ctx.jz ? 'return ' + JSON.stringify({ jz: this.ctx.jz }) : ''
+            },
+            cls: this.ctx.jz ? 'jz' : ''
+        }
+
     }
 
 }

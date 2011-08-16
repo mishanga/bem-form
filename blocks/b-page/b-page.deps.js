@@ -5,7 +5,7 @@
             elem: 'dom',
             mods: { 'init': 'auto' }
         },
-        { block: 'i-jz-forms' },
+        { block: 'i-jz-form' },
         { block: 'b-form-widget' }
     ]
 })
