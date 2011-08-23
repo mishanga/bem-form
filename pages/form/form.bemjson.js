@@ -87,7 +87,7 @@
                                             name: 'middlename',
                                             jz: {
                                                 container: '.b-form-widget',
-                                                enabled: { 'name': 'firstname' }
+                                                valid: { pattern: '^(.+)$' }
                                             }
                                         }
                                     }
