@@ -1,0 +1,21 @@
+.b-fieldset
+{
+    position: relative;
+
+    margin-bottom: 2em;
+    padding-top: 1.5em;
+
+    border-top: 1px solid #ccc;
+}
+
+.b-fieldset__label
+{
+    font-weight: bold;
+
+    position: absolute;
+    top: -0.7em;
+
+    padding-right: 0.5em;
+
+    background: #fff;
+}

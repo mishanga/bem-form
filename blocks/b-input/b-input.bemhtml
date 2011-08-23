@@ -13,6 +13,7 @@ block b-input {
 
         this.ctx.type && (a.type = this.ctx.type);
         this.ctx.value && (a.value = this.ctx.value);
+        this.ctx.disabled && (a.disabled = 'disabled');
 
         if(this.ctx.jz) {
             typeof this.ctx.jz == 'object' || (this.ctx.jz = {});

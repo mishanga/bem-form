@@ -7,6 +7,8 @@
 {
     display: block;
 
+    padding: 2px 0;
+
     border: 1px solid;
     border-color: #a3a3a3 #c6c6c6 #e5e5e5;
     -webkit-box-shadow: 0 1px 1px #cfcfcf inset;
@@ -16,9 +18,12 @@
 
 .b-input__input
 {
-    font: 100% Arial, Helvetica, sans-serif;
+    font: 13px/16px Arial, Helvetica, sans-serif;
 
     width: 100%;
+    height: 16px;
+    margin: 0;
+    padding: 0;
 
     border: 0;
     background: transparent;

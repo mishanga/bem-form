@@ -1,0 +1,13 @@
+block b-fieldset {
+
+    content: [
+        {
+            elem: 'label',
+            content: this.ctx.label
+        },
+        this.ctx.content
+    ]
+
+    elem label, tag: 'div'
+
+}

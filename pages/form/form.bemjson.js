@@ -25,99 +25,156 @@
                                 content: 'BEM form + JZ validation'
                             },
                             {
-                                block: 'b-form-widget',
+                                block: 'b-fieldset',
+                                label: 'Личные данные',
                                 content: [
                                     {
-                                        elem: 'label',
-                                        content: {
-                                            tag: 'label',
-                                            content: 'Фамилия'
-                                        }
+                                        block: 'b-widget',
+                                        content: [
+                                            {
+                                                elem: 'title',
+                                                content: {
+                                                    elem: 'label',
+                                                    content: 'Фамилия'
+                                                }
+                                            },
+                                            {
+                                                elem: 'field',
+                                                content: {
+                                                    block: 'b-input',
+                                                    name: 'lastname',
+                                                    jz: {
+                                                        container: '.b-widget',
+                                                        required: {}
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                elem: 'hint',
+                                                content: 'обязательное поле'
+                                            }
+                                        ]
                                     },
                                     {
-                                        elem: 'field',
-                                        content: {
-                                            block: 'b-input',
-                                            name: 'lastname',
-                                            jz: {
-                                                container: '.b-form-widget',
-                                                required: {}
+                                        block: 'b-widget',
+                                        content: [
+                                            {
+                                                elem: 'title',
+                                                content: {
+                                                    elem: 'label',
+                                                    content: 'Имя'
+                                                }
+                                            },
+                                            {
+                                                elem: 'field',
+                                                content: {
+                                                    block: 'b-input',
+                                                    name: 'firstname',
+                                                    jz: {
+                                                        container: '.b-widget',
+                                                        required: {}
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                elem: 'hint',
+                                                content: 'обязательное поле'
                                             }
-                                        }
+                                        ]
+                                    },
+                                    {
+                                        block: 'b-widget',
+                                        content: [
+                                            {
+                                                elem: 'title',
+                                                content: {
+                                                    elem: 'label',
+                                                    content: 'Отчество'
+                                                }
+                                            },
+                                            {
+                                                elem: 'field',
+                                                content: {
+                                                    block: 'b-input',
+                                                    name: 'middlename',
+                                                    jz: {
+                                                        container: '.b-widget',
+                                                        valid: { pattern: '^[а-яА-ЯёЁ]+$' }
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                elem: 'hint',
+                                                content: 'проверка на русские буквы'
+                                            }
+                                        ]
                                     }
                                 ]
                             },
                             {
-                                block: 'b-form-widget',
+                                block: 'b-fieldset',
+                                label: 'Данные для авторизации',
                                 content: [
                                     {
-                                        elem: 'label',
-                                        content: {
-                                            tag: 'label',
-                                            content: 'Имя'
-                                        }
+                                        block: 'b-widget',
+                                        content: [
+                                            {
+                                                elem: 'title',
+                                                content: {
+                                                    elem: 'label',
+                                                    content: 'Электропочта'
+                                                }
+                                            },
+                                            {
+                                                elem: 'field',
+                                                content: {
+                                                    block: 'b-input',
+                                                    name: 'email',
+                                                    jz: {
+                                                        container: '.b-widget',
+                                                        valid: { type: 'email' }
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                elem: 'hint',
+                                                content: 'валидный email'
+                                            }
+                                        ]
                                     },
                                     {
-                                        elem: 'field',
-                                        content: {
-                                            block: 'b-input',
-                                            name: 'firstname',
-                                            jz: {
-                                                container: '.b-form-widget',
-                                                required: {}
+                                        block: 'b-widget',
+                                        content: [
+                                            {
+                                                elem: 'title',
+                                                content: {
+                                                    elem: 'label',
+                                                    content: 'Пароль'
+                                                }
+                                            },
+                                            {
+                                                elem: 'field',
+                                                content: {
+                                                    block: 'b-input',
+                                                    type: 'password',
+                                                    name: 'password',
+                                                    jz: {
+                                                        container: '.b-widget',
+                                                        required: { min: 6 },
+                                                        valid: { pattern: '[0-9]+' }
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                elem: 'hint',
+                                                content: 'минимум 6 символов, из них хотя бы 1 цифра'
                                             }
-                                        }
+                                        ]
                                     }
                                 ]
                             },
                             {
-                                block: 'b-form-widget',
-                                content: [
-                                    {
-                                        elem: 'label',
-                                        content: {
-                                            tag: 'label',
-                                            content: 'Отчество'
-                                        }
-                                    },
-                                    {
-                                        elem: 'field',
-                                        content: {
-                                            block: 'b-input',
-                                            name: 'middlename',
-                                            jz: {
-                                                container: '.b-form-widget',
-                                                valid: { pattern: '^(.+)$' }
-                                            }
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                block: 'b-form-widget',
-                                content: [
-                                    {
-                                        elem: 'label',
-                                        content: {
-                                            tag: 'label',
-                                            content: 'Электропочта'
-                                        }
-                                    },
-                                    {
-                                        elem: 'field',
-                                        content: {
-                                            block: 'b-input',
-                                            name: 'email',
-                                            jz: {
-                                                container: '.b-form-widget',
-                                                valid: { type: 'email' }
-                                            }
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                block: 'b-form-widget',
+                                block: 'b-widget',
                                 content: {
                                     elem: 'button',
                                     content: {

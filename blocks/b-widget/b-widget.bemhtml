@@ -1,0 +1,18 @@
+block b-widget {
+
+    tag: 'dl'
+
+    elem title {
+        tag: 'dt',
+        content: {
+            return (this.ctx.content || { tag: 'br' });
+        }
+    }
+
+    elem label, tag: 'label'
+
+    elem field, tag: 'dd'
+
+    elem hint, tag: 'dd'
+
+}

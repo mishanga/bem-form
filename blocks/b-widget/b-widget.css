@@ -1,0 +1,49 @@
+.b-widget
+{
+    clear: both;
+
+    min-height: 2em;
+    margin: 0 0 1em 0;
+}
+
+.b-widget__title
+{
+    width: 8em;
+
+    float: left;
+}
+
+.b-widget__field
+{
+    float: left;
+
+    width: 14em;
+    margin-left: 1em;
+}
+
+.b-widget__hint
+{
+    font-size: 85%;
+
+    float: left;
+
+    margin-left: 1em;
+
+    color: #999;
+}
+
+.b-widget__button
+{
+    margin-left: 9em;
+}
+
+body .jz-disabled .b-widget__label
+{
+    color: #e1e1e1;
+}
+
+.jz-required .b-widget__label:after
+{
+	content: '*';
+	color: #f00;
+}
