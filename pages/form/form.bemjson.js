@@ -1,6 +1,6 @@
 ({
     block: 'b-page',
-    title: 'BEM Form',
+    title: 'BEM form + JZ validation',
     favicon: '//yandex.ru/favicon.ico',
     head: [
         { elem: 'css', url: 'form.css'},
@@ -21,8 +21,8 @@
                         elem: 'cell',
                         content: [
                             {
-                                tag: 'h1',
-                                content: 'BEM Form'
+                                block: 'b-page-title',
+                                content: 'BEM form + JZ validation'
                             },
                             {
                                 block: 'b-form-widget',

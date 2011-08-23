@@ -1,6 +1,11 @@
+.b-layout-table__cell
+{
+    padding: 20px 0;
+}
+
 .b-layout-table__gap
 {
-    width: 2%;
+    width: 4%;
     padding: 0;
 }
 
@@ -9,5 +14,5 @@
     display: block;
     visibility: hidden;
 
-    width: 20px;
+    width: 40px;
 }

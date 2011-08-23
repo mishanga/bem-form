@@ -1,6 +1,7 @@
 .b-form-widget
 {
     width: 25em;
+    margin: 0 0 1em 0;
 }
 
 .b-form-widget__label
