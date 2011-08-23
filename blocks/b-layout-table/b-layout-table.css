@@ -1,0 +1,13 @@
+.b-layout-table__gap
+{
+    width: 2%;
+    padding: 0;
+}
+
+.b-layout-table__gap-i
+{
+    display: block;
+    visibility: hidden;
+
+    width: 20px;
+}

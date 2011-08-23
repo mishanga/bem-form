@@ -16,10 +16,12 @@
 
 .b-input__input
 {
+    font: 100% Arial, Helvetica, sans-serif;
+
     width: 100%;
 
-    border: none;
-    background: #fff;
+    border: 0;
+    background: transparent;
 }
 
 .b-input__input:focus
@@ -29,7 +31,7 @@
 
 .jz-invalid .b-input__input
 {
-	color: #c00;
+    color: #c00;
 }
 
 .jz-focused .b-input__box

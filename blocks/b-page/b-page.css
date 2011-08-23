@@ -1,0 +1,10 @@
+.b-page
+{
+    font: 0.8em Arial, Helvetica, sans-serif;
+
+    margin: 0;
+    padding: 0;
+
+    color: #000;
+    background: #fff;
+}
